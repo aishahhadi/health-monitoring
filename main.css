@@ -1,12 +1,14 @@
 /*=== MEDIA QUERY ===*/
-/*
-Theme Name: Medic
-Author: Themefisher
-Author URI: https://themefisher.com/
-Description: Medicle Template
-Version: 1.0.0
 
+/*
+COLOR PALETTE
+Lavender Blush: #FAE8ED
+Mimi Pink: #FDD5DF
+Pink: #FFC2D1
+Cherry Blossom Pink: #FFB2C5
+Amaranth Pink: #FFA2B9
 */
+
 @import url("https://fonts.googleapis.com/css?family=Exo:500,600,700|Roboto&display=swap");
 html {
     overflow-x: hidden;
@@ -111,27 +113,27 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 }
 
 .btn-main {
-    background: #FFA2B9;
+    background: #FFB2C5;
     color: #fff;
-    border-color: #FFA2B9;
+    border-color: #FFB2C5;
 }
 
 .btn-main:hover {
-    background: #e12454;
-    border-color: #e12454;
+    background: #FFC2D1;
+    border-color: #FFC2D1;
     color: #fff;
 }
 
 .btn-main-2 {
-    background: #e12454;
+    background: #FFB2C5;
     color: #fff;
-    border-color: #e12454;
+    border-color: #FFB2C5;
 }
 
 .btn-main-2:hover {
-    background: #223a66;
+    background: #FFC2D1;
     color: #fff;
-    border-color: #223a66;
+    border-color: #FFC2D1;
 }
 
 .btn-solid-border {
@@ -225,7 +227,7 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 }
 
 .section {
-    padding: 130px 0;
+    padding: 100px 0;
 }
 
 .section-sm {
@@ -252,7 +254,7 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
     width: 100%;
     height: 100%;
     opacity: 0.9;
-    background: #223a66;
+    background: #FFA2B9;
 }
 
 .overly-2 {
@@ -359,7 +361,7 @@ a:focus {
 }
 
 .gray-bg {
-    background: #f4f9fc;
+    background: #FDD5DF;
 }
 
 @media (max-width: 480px) {
@@ -373,6 +375,7 @@ a:focus {
         font-size: 28px;
     }
 }
+
 #navbarmain {
     padding: 20px 0px;
 }
@@ -387,9 +390,8 @@ a:focus {
     transition: all .25s ease;
 }
 
-/* Change the color of primary navigation links on hover */
-#navbarmain .navbar-nav > .nav-item > .nav-link:hover {
-    color: #e12454; /* Change this to the desired hover color */
+.dropdown-toggle::after {
+    display: none;
 }
 
 .navbar-brand {
@@ -431,9 +433,8 @@ a:focus {
     color: #e12454;
 }
 
-
 .header-top-bar {
-    background: #FFB2C5;
+    background: #FFC2D1;
     font-size: 14px;
     padding: 10px 0px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
@@ -464,29 +465,23 @@ a:focus {
 
 .banner {
     position: relative;
-    width: 100%;
-    height: 100vh; /* Adjust height as needed */
+    overflow: hidden;
+    background: #fff;
+    background: url("/Images/slider-bg-1.jpg") no-repeat;
+    background-size: cover;
+    min-height: 550px;
 }
 
-.banner .container {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: left;
-    color: #fff; /* Set text color to white for better contrast */
+.banner .block {
+    padding: 80px 0px 160px;
 }
 
-.btn-container .btn {
-    background-color: #e12454;
-    border-color: #e12454;
-    color: #fff;
-    transition: background-color 0.3s, border-color 0.3s;
-}
-
-.btn-container .btn:hover {
-    background-color: #FFB2C5;
-    border-color: #FFB2C5;
+.banner .block h1 {
+    font-size: 60px;
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+    text-transform: capitalize;
+    color: #223a66;
 }
 
 .letter-spacing {
@@ -604,7 +599,7 @@ a:focus {
 }
 
 .features {
-    margin-top: -140px;
+    margin-top: -70px;
 }
 
 .feature-item {
@@ -838,7 +833,7 @@ a:focus {
     top: 0px;
     width: 100%;
     height: 100%;
-    background: rgba(34, 58, 102, 0.95);
+    background: rgb(255, 162, 185, 0.95);
 }
 
 .mb-30 {
@@ -863,8 +858,23 @@ a:focus {
     background-size: cover;
     position: relative;
 }
+
 .testimonial {
     position: relative;
+}
+
+.testimonial:before {
+    width: 48%;
+    height: 100%;
+    top: 0;
+    left: 0px;
+    position: absolute;
+    content: "";
+    background: url("/Images/bg-2.jpg") no-repeat 50% 50%;
+}
+
+.testimonial .slick-dots {
+    text-align: left;
 }
 
 .testimonial-block {
@@ -893,11 +903,23 @@ a:focus {
     opacity: .08;
 }
 
+.testimonial-block .slick-dots {
+    text-align: left;
+}
+
+.testimonial-wrap-2 .slick-dots {
+    margin-left: -10px;
+}
+
 .testimonial-block.style-2 {
-    width: 100%; /* Set width to 100% */
     background: #fff;
     padding: 30px;
+    margin: 0px 4px;
     margin-bottom: 30px;
+}
+
+.testimonial-block.style-2 .testimonial-thumb {
+    float: left;
 }
 
 .testimonial-block.style-2 .testimonial-thumb img {
@@ -911,27 +933,17 @@ a:focus {
 }
 
 .testimonial-block.style-2 .client-info p {
-    background: transparent;
     clear: both;
+    background: transparent;
 }
 
 .testimonial-block.style-2 i {
-    bottom: -20px;
-    color: #e12454;
+    bottom: -43px;
+    color: #6F8BA4;
     opacity: .3;
 }
 
-.testimonial-slider {
-    position: relative;
-    overflow: hidden;
-}
-
-.testimonial-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-@media (max-width: 480px), (max-width: 400px), (max-width: 768px), (max-width: 992px) {
+@media (max-width: 480px) {
     .testimonial-wrap {
         margin-left: 0px;
     }
@@ -940,6 +952,32 @@ a:focus {
     }
 }
 
+@media (max-width: 400px) {
+    .testimonial-wrap {
+        margin-left: 0px;
+    }
+    .testimonial::before {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-wrap {
+        margin-left: 0px;
+    }
+    .testimonial::before {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .testimonial-wrap {
+        margin-left: 0px;
+    }
+    .testimonial::before {
+        display: none;
+    }
+}
 
 .contact-form-wrap .form-group {
     margin-bottom: 20px;
@@ -964,11 +1002,6 @@ a:focus {
     background: #f4f9fc;
     width: 100%;
 }
-
-.icon-spacing {
-    margin-right: 10px; /* Adjust the margin-right to create the desired gap */
-}
-
 
 .social-icons li {
     margin: 0 6px;
@@ -1370,7 +1403,7 @@ a:focus {
 }
 
 .widget h4 {
-    color: #FFA2B9;
+    color: #223a66;
 }
 
 .widget .footer-menu a {
